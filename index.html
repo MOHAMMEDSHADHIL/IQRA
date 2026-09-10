@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IQRA Online Quran Academy — Learn the Qur'an. Live the Qur'an.</title>
+<meta name="description" content="IQRA Online Quran Academy offers live online Quran classes for children, teens and adults — Tajweed, Noorani Qaida, memorization and Islamic studies, taught with individual attention and flexible timings." />
+<meta name="theme-color" content="#12463B" />
+
+<meta property="og:title" content="IQRA Online Quran Academy" />
+<meta property="og:description" content="Learn the Qur'an. Live the Qur'an. Live online Quran classes for the whole family." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          emerald: { DEFAULT:'#12463B', dark:'#0B2F27', light:'#1C6650' },
+          sage:    { DEFAULT:'#7FA98D', pale:'#EAE6D6' },
+          copper:  { DEFAULT:'#B9713B', light:'#D69A63' },
+          ivory:   { DEFAULT:'#F1F6F2', deep:'#E4EEE6' },
+          night:   { DEFAULT:'#0E1712', alt:'#111E17' },
+          surface: { DEFAULT:'#16221B', light:'#1D2C23' },
+          ink:     '#20241F',
+        },
+        fontFamily: {
+          sans: ['"Plus Jakarta Sans"','sans-serif'],
+          arabic: ['"Amiri"','serif'],
+          kufi: ['"Reem Kufi"','sans-serif'],
+        },
+        boxShadow: {
+          soft: '0 10px 40px -12px rgba(0,0,0,0.55)',
+        }
+      }
+    }
+  }
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+<!-- ============ NAVBAR ============ -->
+<header id="navbar" class="navbar fixed top-0 inset-x-0 z-50 py-4">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3">
+      <span class="w-11 h-11 rounded-full bg-emerald flex items-center justify-center relative">
+        <span class="text-copper-light font-kufi text-xl leading-none">اقرأ</span>
+      </span>
+      <span class="leading-tight">
+        <span class="block font-bold text-lg tracking-tight text-ivory">IQRA</span>
+        <span class="block text-[11px] tracking-[0.08em] text-ivory/60">Online Quran Academy</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex flex-1 items-center justify-center gap-8 text-sm font-medium text-ivory/80">
+      <a href="#home" class="hover:text-ivory">Home</a>
+      <a href="#about" class="hover:text-ivory">About</a>
+      <a href="#courses" class="hover:text-ivory">Courses</a>
+      <a href="#why" class="hover:text-ivory">Why Choose Us</a>
+      <a href="#schedule" class="hover:text-ivory">Schedule</a>
+      <a href="#faq" class="hover:text-ivory">FAQ</a>
+      <a href="#contact" class="hover:text-ivory">Contact</a>
+    </nav>
+
+    <div class="hidden lg:block">
+      <a href="#contact" class="bg-emerald text-ivory px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-emerald-light transition-colors">Contact Us</a>
+    </div>
+
+    <button id="menu-btn" aria-label="Open menu" aria-expanded="false" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5">
+      <span class="w-6 h-0.5 bg-ivory"></span>
+      <span class="w-6 h-0.5 bg-ivory"></span>
+      <span class="w-6 h-0.5 bg-ivory"></span>
+    </button>
+  </div>
+
+  <!-- mobile menu -->
+  <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-72 bg-emerald text-ivory z-50 translate-x-full px-7 py-8 flex flex-col items-center text-center gap-6">
+    <button id="menu-close" aria-label="Close menu" class="self-end text-2xl leading-none">&times;</button>
+    <a href="#home" class="menu-link text-lg">Home</a>
+    <a href="#about" class="menu-link text-lg">About</a>
+    <a href="#courses" class="menu-link text-lg">Courses</a>
+    <a href="#why" class="menu-link text-lg">Why Choose Us</a>
+    <a href="#girls" class="menu-link text-lg">For Girls</a>
+    <a href="#children" class="menu-link text-lg">For Children</a>
+    <a href="#schedule" class="menu-link text-lg">Schedule</a>
+    <a href="#faq" class="menu-link text-lg">FAQ</a>
+    <a href="#contact" class="menu-link text-lg">Contact</a>
+    <a href="#contact" class="mt-4 bg-copper text-ivory text-center px-5 py-3 rounded-full font-semibold w-full">Contact Us</a>
+  </div>
+  <div id="menu-overlay" class="fixed inset-0 bg-emerald-dark/50 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative overflow-hidden bg-night pt-40 pb-28 lg:pt-48 lg:pb-36">
+  <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal text-center lg:text-left">
+      <p class="star-mark flex items-center justify-center lg:justify-start text-sage font-semibold text-sm tracking-wide mb-5" style="color:#8FC7A6">A place to learn, recite and grow</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-ivory leading-[1.1] tracking-tight">
+        Learn the Qur'an.<br/>Live the Qur'an.
+      </h1>
+      <p class="mt-6 text-lg text-ivory/70 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+        Online Quran classes designed to help children, teenagers and adults learn the Qur'an with proper Tajweed and understanding — from the comfort of home.
+      </p>
+      <div class="mt-9 flex flex-wrap justify-center lg:justify-start gap-4">
+        <a href="#contact" class="bg-emerald text-ivory px-7 py-3.5 rounded-full font-semibold hover:bg-emerald-light transition-colors shadow-soft">Contact Us</a>
+        <a href="#courses" class="border border-ivory/25 text-ivory px-7 py-3.5 rounded-full font-semibold hover:border-ivory/60 transition-colors">Explore Courses</a>
+      </div>
+
+      <div class="mt-12 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-sm font-semibold text-ivory/70">
+        <span>Learn</span><span class="text-copper">•</span>
+        <span>Recite</span><span class="text-copper">•</span>
+        <span>Understand</span><span class="text-copper">•</span>
+        <span>Practice</span>
+      </div>
+    </div>
+
+    <div class="reveal relative h-[320px] sm:h-[380px] lg:h-[420px] hero-motif border border-ivory/10 flex items-center justify-center">
+      <div class="text-center px-8">
+        <span class="text-6xl sm:text-7xl font-kufi text-ivory/25 leading-none">اقرأ</span>
+        <p class="mt-4 text-sm font-semibold text-ivory/50 tracking-wide">Read. Reflect. Recite.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="geo-divider"></div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-24 bg-night">
+  <div class="max-w-5xl mx-auto px-6 text-center reveal">
+    <p class="star-mark flex items-center justify-center font-semibold text-sm mb-4" style="color:#8FC7A6">About IQRA</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-ivory tracking-tight">Quran education, made reachable</h2>
+    <p class="mt-6 text-lg text-ivory/70 leading-relaxed max-w-3xl mx-auto">
+      IQRA Online Quran Academy is dedicated to making Quran education accessible through flexible, interactive and personalized online learning. Our classes cover Quran reading, Tajweed, Noorani Qaida, memorization and Islamic studies — for both children and adults, taught in a way that respects each student's pace.
+    </p>
+    <div class="mt-12 grid sm:grid-cols-3 gap-6 text-center">
+      <div class="hover-card bg-surface rounded-2xl p-6 shadow-soft border border-ivory/5">
+        <h3 class="font-bold text-ivory">Reading &amp; Tajweed</h3>
+        <p class="mt-2 text-sm text-ivory/65">Correct pronunciation, fluency and the rules of Tajweed, taught step by step.</p>
+      </div>
+      <div class="hover-card bg-surface rounded-2xl p-6 shadow-soft border border-ivory/5">
+        <h3 class="font-bold text-ivory">Noorani Qaida &amp; Memorization</h3>
+        <p class="mt-2 text-sm text-ivory/65">A strong foundation for beginners, and structured guidance for those memorizing Surahs.</p>
+      </div>
+      <div class="hover-card bg-surface rounded-2xl p-6 shadow-soft border border-ivory/5">
+        <h3 class="font-bold text-ivory">Islamic Studies</h3>
+        <p class="mt-2 text-sm text-ivory/65">Everyday Islamic knowledge, values and manners for children and adults alike.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURSES ============ -->
+<section id="courses" class="py-24 bg-emerald relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="star-mark flex items-center justify-center text-copper-light font-semibold text-sm mb-4">Our Courses</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-ivory tracking-tight">A course for every stage of learning</h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="hover-card course-card bg-emerald-light/50 border border-ivory/10 rounded-2xl p-7 text-center">
+        <div class="w-12 h-12 mx-auto rounded-xl bg-copper/20 flex items-center justify-center text-copper-light text-xl">﴾ ﴿</div>
+        <h3 class="mt-5 font-bold text-lg text-ivory">Live Tajweed Classes</h3>
+        <p class="mt-2 text-sm text-ivory/65 leading-relaxed">Learn correct Quran pronunciation and recitation according to Tajweed rules.</p>
+        <a href="#contact" class="mt-5 inline-block text-sm font-semibold text-copper-light hover:underline">Contact Us →</a>
+      </div>
+      <div class="hover-card course-card bg-emerald-light/50 border border-ivory/10 rounded-2xl p-7 text-center">
+        <div class="w-12 h-12 mx-auto rounded-xl bg-copper/20 flex items-center justify-center text-copper-light text-xl">ا ب ت</div>
+        <h3 class="mt-5 font-bold text-lg text-ivory">Noorani Qaida</h3>
+        <p class="mt-2 text-sm text-ivory/65 leading-relaxed">Build a strong foundation in Quran reading and Arabic pronunciation.</p>
+        <a href="#contact" class="mt-5 inline-block text-sm font-semibold text-copper-light hover:underline">Contact Us →</a>
+      </div>
+      <div class="hover-card course-card bg-emerald-light/50 border border-ivory/10 rounded-2xl p-7 text-center">
+        <div class="w-12 h-12 mx-auto rounded-xl bg-copper/20 flex items-center justify-center text-copper-light text-xl">📖</div>
+        <h3 class="mt-5 font-bold text-lg text-ivory">Quran Reading</h3>
+        <p class="mt-2 text-sm text-ivory/65 leading-relaxed">Improve fluency, pronunciation and confidence in Quran recitation.</p>
+        <a href="#contact" class="mt-5 inline-block text-sm font-semibold text-copper-light hover:underline">Contact Us →</a>
+      </div>
+      <div class="hover-card course-card bg-emerald-light/50 border border-ivory/10 rounded-2xl p-7 text-center">
+        <div class="w-12 h-12 mx-auto rounded-xl bg-copper/20 flex items-center justify-center text-copper-light text-xl">✺</div>
+        <h3 class="mt-5 font-bold text-lg text-ivory">Quran Memorization</h3>
+        <p class="mt-2 text-sm text-ivory/65 leading-relaxed">Structured guidance for students who want to memorize selected Surahs or the Quran.</p>
+        <a href="#contact" class="mt-5 inline-block text-sm font-semibold text-copper-light hover:underline">Contact Us →</a>
+      </div>
+      <div class="hover-card course-card bg-emerald-light/50 border border-ivory/10 rounded-2xl p-7 text-center">
+        <div class="w-12 h-12 mx-auto rounded-xl bg-copper/20 flex items-center justify-center text-copper-light text-xl">☾</div>
+        <h3 class="mt-5 font-bold text-lg text-ivory">Islamic Studies</h3>
+        <p class="mt-2 text-sm text-ivory/65 leading-relaxed">Basic Islamic knowledge, values, manners and everyday teachings.</p>
+        <a href="#contact" class="mt-5 inline-block text-sm font-semibold text-copper-light hover:underline">Contact Us →</a>
+      </div>
+      <div class="hover-card course-card bg-emerald-light/50 border border-ivory/10 rounded-2xl p-7 text-center">
+        <div class="w-12 h-12 mx-auto rounded-xl bg-copper/20 flex items-center justify-center text-copper-light text-xl">🧒</div>
+        <h3 class="mt-5 font-bold text-lg text-ivory">Kids Quran Classes</h3>
+        <p class="mt-2 text-sm text-ivory/65 leading-relaxed">Interactive Quran learning specially designed for children.</p>
+        <a href="#contact" class="mt-5 inline-block text-sm font-semibold text-copper-light hover:underline">Contact Us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECIAL CLASSES ============ -->
+<section class="py-24 bg-night">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8">
+    <div id="girls" class="reveal rounded-3xl bg-surface border border-ivory/5 p-9 shadow-soft text-center flex flex-col items-center">
+      <p class="star-mark flex items-center justify-center font-semibold text-sm mb-3" style="color:#8FC7A6">For Girls</p>
+      <h3 class="text-2xl font-extrabold text-ivory">Separate classes for girls</h3>
+      <p class="mt-4 text-ivory/70 leading-relaxed">Girls can attend dedicated classes in a comfortable and suitable learning environment, taught with the same care and structure as every IQRA course.</p>
+      <a href="#contact" class="mt-6 inline-block text-sm font-semibold text-ivory border-b-2 border-copper pb-0.5">Enquire about girls' classes</a>
+    </div>
+    <div id="children" class="reveal rounded-3xl bg-surface border border-ivory/5 p-9 shadow-soft text-center flex flex-col items-center">
+      <p class="star-mark flex items-center justify-center font-semibold text-sm mb-3" style="color:#8FC7A6">Classes for Both</p>
+      <h3 class="text-2xl font-extrabold text-ivory">For children &amp; adults, together or separate</h3>
+      <p class="mt-4 text-ivory/70 leading-relaxed">Suitable Quran learning programs are offered for both boys and girls, and for adult learners starting at any stage — each guided at their own pace.</p>
+      <a href="#contact" class="mt-6 inline-block text-sm font-semibold text-ivory border-b-2 border-copper pb-0.5">Enquire about class options</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ONLINE LEARNING ============ -->
+<section class="py-24 bg-night-alt">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal text-center lg:text-left flex flex-col items-center lg:items-start">
+      <p class="star-mark flex items-center justify-center lg:justify-start font-semibold text-sm mb-4" style="color:#8FC7A6">Learn From Anywhere</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-ivory tracking-tight leading-tight">Class, wherever there's a screen and a quiet corner</h2>
+      <p class="mt-5 text-ivory/70 leading-relaxed">Live, interactive sessions held over WhatsApp and Google Meet, with flexible scheduling and personal attention from experienced teachers — all from the comfort of home.</p>
+      <ul class="mt-8 space-y-3 text-ivory/80 inline-block text-left">
+        <li class="flex items-center gap-3"><span class="star-mark text-copper"></span>Classes through WhatsApp</li>
+        <li class="flex items-center gap-3"><span class="star-mark text-copper"></span>Classes through Google Meet</li>
+        <li class="flex items-center gap-3"><span class="star-mark text-copper"></span>Live, interactive sessions</li>
+        <li class="flex items-center gap-3"><span class="star-mark text-copper"></span>Flexible, home-based learning</li>
+      </ul>
+    </div>
+    <div class="reveal grid grid-cols-2 gap-5">
+      <div class="bg-surface rounded-2xl p-7 shadow-soft flex flex-col items-center text-center gap-3">
+        <div class="w-11 h-11 rounded-full bg-sage/25 flex items-center justify-center text-ivory font-bold">W</div>
+        <p class="font-semibold text-ivory">WhatsApp Classes</p>
+        <p class="text-sm text-ivory/60">Simple, familiar and easy to join.</p>
+      </div>
+      <div class="bg-surface rounded-2xl p-7 shadow-soft flex flex-col items-center text-center gap-3 mt-8">
+        <div class="w-11 h-11 rounded-full bg-copper/20 flex items-center justify-center text-copper font-bold">G</div>
+        <p class="font-semibold text-ivory">Google Meet Classes</p>
+        <p class="text-sm text-ivory/60">Face-to-face live sessions with your teacher.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section id="why" class="py-24 bg-night">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="star-mark flex items-center justify-center font-semibold text-sm mb-4" style="color:#8FC7A6">Why Choose IQRA</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-ivory tracking-tight">Built around the student, not the schedule</h2>
+    </div>
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="hover-card bg-surface rounded-2xl p-7 border border-ivory/5 shadow-soft text-center">
+        <p class="star-mark flex items-center justify-center text-copper font-bold"></p>
+        <h3 class="mt-2 font-bold text-ivory">Qualified Teachers</h3>
+        <p class="mt-2 text-sm text-ivory/65">Guidance from teachers experienced in Quran instruction.</p>
+      </div>
+      <div class="hover-card bg-surface rounded-2xl p-7 border border-ivory/5 shadow-soft text-center">
+        <p class="star-mark flex items-center justify-center text-copper font-bold"></p>
+        <h3 class="mt-2 font-bold text-ivory">Live Interactive Classes</h3>
+        <p class="mt-2 text-sm text-ivory/65">Real-time sessions, not pre-recorded lessons.</p>
+      </div>
+      <div class="hover-card bg-surface rounded-2xl p-7 border border-ivory/5 shadow-soft text-center">
+        <p class="star-mark flex items-center justify-center text-copper font-bold"></p>
+        <h3 class="mt-2 font-bold text-ivory">Individual Attention</h3>
+        <p class="mt-2 text-sm text-ivory/65">Each student is guided at their own pace.</p>
+      </div>
+      <div class="hover-card bg-surface rounded-2xl p-7 border border-ivory/5 shadow-soft text-center">
+        <p class="star-mark flex items-center justify-center text-copper font-bold"></p>
+        <h3 class="mt-2 font-bold text-ivory">Flexible Timings</h3>
+        <p class="mt-2 text-sm text-ivory/65">Schedules that work around your day.</p>
+      </div>
+      <div class="hover-card bg-surface rounded-2xl p-7 border border-ivory/5 shadow-soft text-center">
+        <p class="star-mark flex items-center justify-center text-copper font-bold"></p>
+        <h3 class="mt-2 font-bold text-ivory">Separate Classes for Girls</h3>
+        <p class="mt-2 text-sm text-ivory/65">A comfortable, dedicated learning environment.</p>
+      </div>
+      <div class="hover-card bg-surface rounded-2xl p-7 border border-ivory/5 shadow-soft text-center">
+        <p class="star-mark flex items-center text-copper font-bold"></p>
+        <h3 class="mt-2 font-bold text-ivory">Classes for Children &amp; Adults</h3>
+        <p class="mt-2 text-sm text-ivory/65">Programs suited to every age and level.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="py-24 bg-emerald">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="star-mark flex items-center justify-center text-copper-light font-semibold text-sm mb-4">How It Works</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-ivory tracking-tight">Four steps to your first class</h2>
+    </div>
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 relative">
+      <div class="hidden lg:block absolute top-6 left-[12%] right-[12%] h-px bg-ivory/15"></div>
+      <div class="reveal text-center">
+        <span class="text-copper-light font-extrabold text-sm">01</span>
+        <h3 class="mt-3 font-bold text-ivory">Register</h3>
+        <p class="mt-2 text-sm text-ivory/60">Share a few details to get started.</p>
+      </div>
+      <div class="reveal text-center">
+        <span class="text-copper-light font-extrabold text-sm">02</span>
+        <h3 class="mt-3 font-bold text-ivory">Choose Your Course</h3>
+        <p class="mt-2 text-sm text-ivory/60">Pick the course that fits your level.</p>
+      </div>
+      <div class="reveal text-center">
+        <span class="text-copper-light font-extrabold text-sm">03</span>
+        <h3 class="mt-3 font-bold text-ivory">Meet Your Teacher</h3>
+        <p class="mt-2 text-sm text-ivory/60">Get matched and introduced online.</p>
+      </div>
+      <div class="reveal text-center">
+        <span class="text-copper-light font-extrabold text-sm">04</span>
+        <h3 class="mt-3 font-bold text-ivory">Start Learning</h3>
+        <p class="mt-2 text-sm text-ivory/60">Join your first live class.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCHEDULE ============ -->
+<section id="schedule" class="py-24 bg-night">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="star-mark flex items-center justify-center font-semibold text-sm mb-4" style="color:#8FC7A6">Class Schedule</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-ivory tracking-tight">Find a slot that fits your day</h2>
+    </div>
+    <div class="mt-14 grid sm:grid-cols-3 gap-6">
+      <div class="rounded-2xl bg-surface border border-ivory/5 shadow-soft p-7 text-center">
+        <h3 class="font-bold text-ivory">Morning Classes</h3>
+        <p class="mt-2 text-copper font-semibold">8:00 AM – 11:00 AM</p>
+      </div>
+      <div class="rounded-2xl bg-surface border border-ivory/5 shadow-soft p-7 text-center">
+        <h3 class="font-bold text-ivory">Afternoon Classes</h3>
+        <p class="mt-2 text-copper font-semibold">2:00 PM – 5:00 PM</p>
+      </div>
+      <div class="rounded-2xl bg-surface border border-ivory/5 shadow-soft p-7 text-center">
+        <h3 class="font-bold text-ivory">Evening Classes</h3>
+        <p class="mt-2 text-copper font-semibold">6:00 PM – 9:00 PM</p>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-sm text-ivory/60">Timings can be discussed according to student availability.</p>
+    <div class="mt-6 text-center">
+      <a href="#contact" class="inline-block bg-emerald text-ivory px-7 py-3 rounded-full font-semibold hover:bg-emerald-light transition-colors">Enquire About Timings</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="py-24 bg-night-alt">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="star-mark flex items-center justify-center font-semibold text-sm mb-4" style="color:#8FC7A6">Testimonials</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-ivory tracking-tight">What families are saying</h2>
+      <p class="mt-3 text-sm text-ivory/50 italic">Placeholder quotes — to be replaced with real student and parent reviews.</p>
+    </div>
+    <div class="mt-14 grid sm:grid-cols-3 gap-6">
+      <div class="bg-surface rounded-2xl p-7 shadow-soft text-center">
+        <p class="text-ivory/75 leading-relaxed">"Placeholder testimonial from a parent about their child's Quran learning experience."</p>
+        <p class="mt-5 text-sm font-semibold text-ivory">— Parent, Placeholder Name</p>
+      </div>
+      <div class="bg-surface rounded-2xl p-7 shadow-soft text-center">
+        <p class="text-ivory/75 leading-relaxed">"Placeholder testimonial from a parent about their child's Quran learning experience."</p>
+        <p class="mt-5 text-sm font-semibold text-ivory">— Parent, Placeholder Name</p>
+      </div>
+      <div class="bg-surface rounded-2xl p-7 shadow-soft text-center">
+        <p class="text-ivory/75 leading-relaxed">"Placeholder testimonial from a student about their Quran learning experience."</p>
+        <p class="mt-5 text-sm font-semibold text-ivory">— Student, Placeholder Name</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-24 bg-night">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center reveal">
+      <p class="star-mark flex items-center justify-center font-semibold text-sm mb-4" style="color:#8FC7A6">FAQ</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-ivory tracking-tight">Common questions</h2>
+    </div>
+
+    <div class="mt-12 divide-y divide-ivory/10 border-y border-ivory/10" id="faq-list"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-24 bg-night">
+  <div class="max-w-5xl mx-auto px-6 text-center reveal">
+    <p class="star-mark flex items-center justify-center font-semibold text-sm mb-4" style="color:#8FC7A6">Contact</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-ivory tracking-tight">Have questions?</h2>
+    <p class="mt-4 text-ivory/70 max-w-xl mx-auto">Contact us to learn more about our courses and class timings.</p>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <a href="tel:+917736780062" class="hover-card bg-surface rounded-2xl p-6 shadow-soft">
+        <p class="text-xs font-semibold uppercase tracking-wide text-ivory/50">Phone</p>
+        <p class="mt-2 font-bold text-ivory">+91 77367 80062</p>
+      </a>
+      <a href="https://wa.me/917736780062" target="_blank" rel="noopener" class="hover-card bg-surface rounded-2xl p-6 shadow-soft">
+        <p class="text-xs font-semibold uppercase tracking-wide text-ivory/50">WhatsApp</p>
+        <p class="mt-2 font-bold text-ivory">+91 77367 80062</p>
+      </a>
+      <div class="bg-surface rounded-2xl p-6 shadow-soft">
+        <p class="text-xs font-semibold uppercase tracking-wide text-ivory/50">Email</p>
+        <p class="mt-2 font-bold text-ivory/40">Placeholder — to be added</p>
+      </div>
+      <div class="bg-surface rounded-2xl p-6 shadow-soft">
+        <p class="text-xs font-semibold uppercase tracking-wide text-ivory/50">Social</p>
+        <p class="mt-2 font-bold text-ivory/40">Placeholder — to be added</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-emerald-dark text-ivory/70 pt-16 pb-8 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.06]" style="background-image: repeating-linear-gradient(45deg, #B9713B 0 1px, transparent 1px 22px), repeating-linear-gradient(-45deg, #B9713B 0 1px, transparent 1px 22px);"></div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid sm:grid-cols-3 gap-10 text-center sm:text-center">
+      <div class="flex flex-col items-center">
+        <p class="text-ivory font-bold text-lg">IQRA</p>
+        <p class="text-xs tracking-wide text-ivory/50">Online Quran Academy</p>
+        <p class="mt-4 text-sm max-w-xs">Live online Quran classes for children, teens and adults — Tajweed, Noorani Qaida, memorization and Islamic studies.</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <p class="text-ivory font-semibold mb-4 text-sm">Navigation</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#home" class="hover:text-ivory">Home</a></li>
+          <li><a href="#about" class="hover:text-ivory">About</a></li>
+          <li><a href="#courses" class="hover:text-ivory">Courses</a></li>
+          <li><a href="#schedule" class="hover:text-ivory">Schedule</a></li>
+          <li><a href="#faq" class="hover:text-ivory">FAQ</a></li>
+          <li><a href="#contact" class="hover:text-ivory">Contact</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col items-center">
+        <p class="text-ivory font-semibold mb-4 text-sm">Quick Links</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#contact" class="hover:text-ivory">Contact Us</a></li>
+          <li><a href="https://wa.me/917736780062" target="_blank" rel="noopener" class="hover:text-ivory">WhatsApp</a></li>
+          <li><a href="#courses" class="hover:text-ivory">Courses</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-6 border-t border-ivory/10 text-xs text-ivory/40 text-center">
+      © 2026 IQRA Online Quran Academy. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
