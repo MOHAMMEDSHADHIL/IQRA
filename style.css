@@ -1,0 +1,48 @@
+  html { scroll-behavior: smooth; }
+  body { font-family:'Plus Jakarta Sans', sans-serif; background:#0E1712; color:#EAF2ED; }
+
+  .geo-divider {
+    height: 14px;
+    background-image: repeating-linear-gradient(135deg, #B9713B 0 2px, transparent 2px 10px);
+    opacity: .55;
+  }
+
+  .star-mark::before {
+    content: "";
+    display: inline-block;
+    width: 9px; height: 9px;
+    background: currentColor;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    margin-right: .5rem;
+    transform: translateY(1px);
+  }
+
+  .navbar { transition: background-color .4s ease, box-shadow .4s ease; }
+  .navbar.scrolled { background:#0E1712; box-shadow:0 6px 30px -10px rgba(0,0,0,.5); }
+
+  .reveal { opacity:0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity:1; transform:none; }
+
+  .hover-card { transition: transform .3s ease, box-shadow .3s ease; }
+  .hover-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px -14px rgba(0,0,0,0.6); }
+
+  .accordion-panel { max-height:0; overflow:hidden; transition:max-height .4s ease; }
+
+  .mobile-menu { transition: transform .35s ease; }
+
+  input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible {
+    outline: 2px solid #B9713B; outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { transition:none; opacity:1; transform:none; }
+  }
+
+  /* decorative hero geometric pattern (pure CSS, no 3D) */
+  .hero-motif {
+    background-image:
+      radial-gradient(circle at 30% 30%, rgba(185,113,59,0.16) 0, transparent 55%),
+      repeating-linear-gradient(45deg, rgba(234,242,237,0.05) 0 1px, transparent 1px 26px),
+      repeating-linear-gradient(-45deg, rgba(234,242,237,0.05) 0 1px, transparent 1px 26px);
+    border-radius: 1.75rem;
+  }
